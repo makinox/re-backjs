@@ -4,9 +4,7 @@ const app = express();
 const { config } = require('./config/index');
 const mooviesApi = require('./routes/moovies');
 
-// app.get('/', (req, res) => {
-//   res.send('Hello world');
-// });
+app.use(express.json());
 
 mooviesApi(app);
 
