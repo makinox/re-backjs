@@ -3,12 +3,14 @@ const app = express();
 
 const { config } = require('./config/index');
 const mooviesApi = require('./routes/moovies');
+const userMoviesApi = require('./routes/userMovies');
 const { errorHandler, logErrors, wrapErrors } = require('./utils/middlewares/errorHandlers');
 const notFoundHandler = require('./utils/middlewares/notFoundHandler');
 
 app.use(express.json());
 
 mooviesApi(app);
+userMoviesApi(app);
 
 app.use(notFoundHandler);
 
