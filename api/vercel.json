@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "builds": [{ "src": "index.js", "use": "@now/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "/index.js" }],
+  "env": {
+    "DB_USER": "@re_node_user",
+    "DB_PASSWORD": "@re_node_password",
+    "DB_HOST": "@re_node_host",
+    "DB_NAME": "@re_node_name"
+  }
+}
